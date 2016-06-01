@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e477728e</color>
+    <color name="colorPrimaryDark">#e45d5971</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="txt_color">#FFFF1111</color>
+
+    <!--Белый,Черный,Красный,Зеленый,Синий,Желтый-->
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+    <color name="red">#F00</color>
+    <color name="green">#0F0</color>
+    <color name="blue">#00F</color>
+    <color name="yellow">#ffee00</color>
+
+    <color name="darker_shad">#46525e</color>
+    <color name="gray">#4a4a4a</color>
+
+
+</resources>

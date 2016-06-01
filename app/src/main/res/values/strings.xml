@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">android1-Les4</string>
+    <string name="my_txt">Портретная ориентация</string>
+
+    <string name="my_last_name">Куликовский</string>
+    <string name="my_name">Виктор</string>
+    <string name="my_patronymic">Константинович</string>
+    <string name="my_email">vicotr-kul@rambler.ru</string>
+    <string-array name="my_skills">
+        <item>занимаюсь разработкой проектов full stack с нуля</item>
+        <item>хорошо разбираюсь в вёрстке, проектировании, дизайне</item>
+        <item>отслеживаю работу на любом этапе и тестировании</item>
+
+        <item>быстро нахожу решения</item>
+        <item>опыт фултайма: 2 года, партайм: 1.5 лет</item>
+
+        <item>Знание языка: Английский (технический)</item>
+        <item>Знания различных сред и библиотек</item>
+
+        <item>участвовал в проектах нашей компании</item>
+        <item>имел опыт работы с разными фреймворками</item>
+
+        <item>Как по мне самый полезный код должен быть лаконичным</item>
+    </string-array>
+
+
+    <string-array name="my_skills_title">
+        <item>Full Stack</item>
+        <item>Вёрстка</item>
+        <item>Тестирование</item>
+
+        <item>Работоспособность</item>
+        <item>Опыт</item>
+
+        <item>Иностранный яз.</item>
+        <item>Среды разработок</item>
+
+        <item>Участие</item>
+        <item>Фреймоврки</item>
+
+        <item>#</item>
+    </string-array>
+</resources>
