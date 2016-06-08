@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.net.Uri;
 
 
 import android.support.v4.app.Fragment;
@@ -131,16 +132,28 @@ public class MainActivity extends AppCompatActivity {
 
 
         switch(item.getItemId()) {
-            case R.id.delete:
-                showToast("Нажата delete");
-                break;
-            ///.. ниже так не стоит делать
-            case R.id.settings:
-                showToast("Нажата settings");
-                break;
-        }
+//            case R.id.delete:
+//                showToast("Нажата delete");
+//                break;
+//            ///.. ниже так не стоит делать
+//            case R.id.settings:
+//                showToast("Нажата settings");
+//                break;
 
-        return super.onOptionsItemSelected(item);
+            case R.id.main_menu_action_open_on_github:
+                openUrl(getResources().getString(R.string.gitHubLnk));
+                return true;
+            case R.id.main_menu_action_open_on_linkedin:
+                openUrl(getResources().getString(R.string.linkedInLnk));
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void openUrl(String url) {
+        Intent intent= new Intent(Intent.ACTION_VIEW,Uri.parse(url));
+        startActivity(intent);
     }
 
 

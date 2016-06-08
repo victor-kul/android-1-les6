@@ -5,7 +5,10 @@ package com.lessons.vi_key.android1_les2;
  */
 
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -26,14 +29,12 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-/**
- * Created by beerko on 09.05.16.
- */
 public class PageMain extends Fragment {
 
     ImageView imageView, imageAva;
     Button button;
     ListView listView;
+
 
 
     private ArrayList<HashMap<String, Object>> mCatList;
@@ -50,8 +51,6 @@ public class PageMain extends Fragment {
 
 
         View view = inflater.inflate(R.layout.page_main, null);
-
-
 
 
         listView = (ListView) view.findViewById(R.id.listView);
@@ -93,7 +92,7 @@ public class PageMain extends Fragment {
         for (int i = 0; i < skills.length; i++) {
 //            sBuilder.append(skills[i] + "\n");
 
-            hm = new HashMap<>();
+            hm = new HashMap<String, Object>();
             hm.put(TITLE, titles[i]);
             hm.put(DESCRIPTION, skills[i]);
 //        hm.put(ICON, R.mipmap.ic_launcher);
@@ -165,4 +164,5 @@ public class PageMain extends Fragment {
             return false;
         }
     }
+
 }

@@ -4,6 +4,8 @@ package com.lessons.vi_key.android1_les2;
  * Created by vi-key on 20.05.2016.
  */
 
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -21,10 +23,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-/**
- * Created by beerko on 09.05.16.
- */
 public class PageSecond extends Fragment {
+
+
+    private static final int CAMERA = 100;
+    private static final int TEXT = 101;
+    ImageView imagePhoto;
 
     @Nullable
     @Override
@@ -35,6 +39,9 @@ public class PageSecond extends Fragment {
         final Button btn;
 
         View view = inflater.inflate(R.layout.second_page,null);
+
+
+        imagePhoto = (ImageView) view.findViewById(R.id.imageVwScreen);
 
 
         imageView = (ImageView) view.findViewById(R.id.imageView);
@@ -80,5 +87,22 @@ public class PageSecond extends Fragment {
         });
 
         return view;
+    }
+
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+//        if (requestCode == CAMERA && resultCode == RESULT_OK){
+        if (requestCode == CAMERA){
+            Bitmap cameraImg = (Bitmap) data.getExtras().get("data");
+            imagePhoto.setImageBitmap(cameraImg);
+        }
+//        if (requestCode == TEXT){
+//            Toast.makeText(this, data.getStringExtra("string"), Toast.LENGTH_SHORT).show();
+//        }
+//        if (requestCode == RESULT_CANCELED){
+//            Toast.makeText(this, "Wrong Data", Toast.LENGTH_SHORT).show();
+//        }
     }
 }

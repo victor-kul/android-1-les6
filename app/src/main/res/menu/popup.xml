@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-<item android:title="popUpItem"
-    android:onClick="ShowDialogPicker"/>
+<!--<item android:title="popUpItem"-->
+    <!--android:onClick="ShowDialogPicker"/>-->
+    <item
+        android:id="@+id/main_menu_action_open_on_github"
+        android:title="@string/menuGitHub"
+        android:icon="@drawable/ic_git_hub_logo_24dp"/>
 </menu>

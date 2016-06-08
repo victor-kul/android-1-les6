@@ -42,69 +42,104 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Связаться со мной"
+                android:text="@string/h_txt_mail"
                 android:id="@+id/textView2"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="30dp" />
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp" />
 
-            <TextView
-                android:id="@+id/text"
-                android:text="Это просто, нужно лишь..."
-                android:textSize="14sp"
-                android:textColor="#103d42"
-                android:layout_width="wrap_content"
+            <!--<TextView-->
+                <!--android:id="@+id/text"-->
+                <!--android:text="Это просто, нужно лишь..."-->
+                <!--android:textSize="14sp"-->
+                <!--android:textColor="#103d42"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_marginTop="8dp" />-->
+
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp">
+
+                <EditText
+                    android:id="@+id/editTextEmail"
+                    android:hint="Ваш e-mail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:padding="8dp"
+                    android:background="@drawable/frame"
+                    android:maxWidth="200dp"
+                    android:layout_centerVertical="true" />
+
+                <Button
+                    android:id="@+id/btn"
+                    android:text="Да"
+                    android:enabled="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignLeft="@+id/text"
+                    android:layout_alignStart="@+id/text"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:layout_alignParentRight = "true"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="8dp" />
+                android:layout_weight="0.58">
 
-            <EditText
-                android:id="@+id/editTextEmail"
-                android:hint="Ваш e-mail"
-                android:layout_width="331dp"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:layout_gravity="center_horizontal"
-                android:padding="18dp"
-                android:background="@drawable/frame"
-                android:maxWidth="200dp" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_make_photo"
+                    android:id="@+id/screenBtn"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_alignParentTop="false"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="onClickScreenBtn" />
 
-            <Button
-                android:id="@+id/btn"
-                android:text="Связаться"
-                android:enabled="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_alignLeft="@+id/text"
-                android:layout_alignStart="@+id/text"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:padding="20dp" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageVwScreen"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_below="@+id/screenBtn"
+                    android:layout_alignParentBottom="true" />
 
-            <TextView
-                android:layout_width="210dp"
-                android:visibility="invisible"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:id="@+id/textAll"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="0.44"
-                android:gravity="center" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:visibility="invisible"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:id="@+id/textAll"
+                    android:layout_weight="0.18"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_alignParentBottom="false"
+                    android:layout_below="@+id/imageVwScreen"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentTop="false"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentRight="false"
+                    android:layout_alignWithParentIfMissing="false" />
+
+            </RelativeLayout>
+
         </LinearLayout>
-
-        <Button
-            android:onClick="btnClick"
-            android:id="@+id/button"
-            android:text="test"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:visibility="invisible" />
 
     </RelativeLayout>
 

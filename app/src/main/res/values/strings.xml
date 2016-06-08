@@ -1,11 +1,12 @@
 <resources>
-    <string name="app_name">android1-Les4</string>
+    <string name="app_name">android1-Les5</string>
     <string name="my_txt">Портретная ориентация</string>
 
     <string name="my_last_name">Куликовский</string>
     <string name="my_name">Виктор</string>
     <string name="my_patronymic">Константинович</string>
     <string name="my_email">vicotr-kul@rambler.ru</string>
+
     <string-array name="my_skills">
         <item>занимаюсь разработкой проектов full stack с нуля</item>
         <item>хорошо разбираюсь в вёрстке, проектировании, дизайне</item>
@@ -40,4 +41,12 @@
 
         <item>#</item>
     </string-array>
+
+    <string name="LinkedId">Мой LinkedIn</string>
+    <string name="menuGitHub">Мой GitHub</string>
+
+    <string name="gitHubLnk">https://github.com/victor-kul</string>
+    <string name="linkedInLnk">https://www.linkedin.com/in/kul-victor-0b33bbb8</string>
+    <string name="btn_make_photo">Фото</string>
+    <string name="h_txt_mail">Связаться со мной</string>
 </resources>
